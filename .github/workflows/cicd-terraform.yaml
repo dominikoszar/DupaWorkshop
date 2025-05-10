@@ -28,4 +28,3 @@ jobs:
           arg-lock: ${{ github.event_name == 'push' }}
           arg-backend-config: dev.tfbackend
           arg-var-file: dev.tfvars
-          plan-encrypt: 
