@@ -52,3 +52,9 @@ We set up Azure infrastructure using Terraform with best practices, then create 
 23. Join GH Enterprise org
 24. Create .github/workflows/cicd-terraform.yaml
 25. Populate cicd-terraform.yaml code
+
+26. Prepare azure user assgned managed identity
+27. Assige roles for MI
+28. Create Federated Credentials for MI
+
+29. Edit cicd-terraform.yaml
