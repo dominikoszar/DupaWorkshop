@@ -13,8 +13,7 @@ jobs:
       contents: read       # Required to checkout repository.
       pull-requests: write # Required to add comment and label.
       id-token: write     # Required to create a comment with the plan output.
-      issues: write       # Required to add comment and label.
-
+      issues: write       # Requ
     env:
       ARM_CLIENT_ID: 2a3adff6-1144-4784-81ee-b7e0c02a4ded
       ARM_SUBSCRIPTION_ID: 382b6330-6cf0-4e15-b202-543c02240501
