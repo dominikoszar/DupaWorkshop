@@ -26,6 +26,6 @@ jobs:
           working-directory: terraform
           command: ${{ github.event_name == 'push' && 'apply' || 'plan' }}
           arg-lock: ${{ github.event_name == 'push' }}
-          arg-backend-config: env/dev.tfbackend
+          arg-backend-config: dev.tfbackend
           arg-var-file: dev.tfvars
           plan-encrypt: 
