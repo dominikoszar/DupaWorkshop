@@ -8,9 +8,9 @@ jobs:
     environment: dev
     permissions:
       actions: read        # Required to identify workflow run.
-      checks: write        # Required to add status summary.
+      checks: write        # Required to add y.
       contents: read       # Required to checkout repository.
-      pull-requests: write # Required to add comment and label.
+      pull-requests: write # Required to 
       id-token: write     # Required to create a comment with the plan output.
       issues: write       # Requ
     env:
