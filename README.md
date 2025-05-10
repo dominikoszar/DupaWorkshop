@@ -50,4 +50,5 @@ We set up Azure infrastructure using Terraform with best practices, then create 
 
 22. expand main.tf with variables & for_each for 2 container apps
 23. Join GH Enterprise org
-24. 
+24. Create .github/workflows/cicd-terraform.yaml
+25. Populate cicd-terraform.yaml code

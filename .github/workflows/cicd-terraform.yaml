@@ -1,0 +1,31 @@
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read        # Required to identify workflow run.
+      checks: write        # Required to add status summary.
+      contents: read       # Required to checkout repository.
+      pull-requests: write # Required to add comment and label.
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      # Run plan by default, or apply on merge.
+      - uses: op5dev/tf-via-pr@v13
+        with:
+          working-directory: terraform
+          command: ${{ github.event_name == 'push' && 'apply' || 'plan' }}
+          arg-lock: ${{ github.event_name == 'push' }}
+          arg-backend-config: env/dev.tfbackend
+          arg-var-file: dev.tfvars
+          plan-encrypt: 
