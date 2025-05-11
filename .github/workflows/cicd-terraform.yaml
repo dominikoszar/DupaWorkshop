@@ -1,6 +1,7 @@
 on:
+  pull_request:
   push:
-    branches: main
+    branches: [main]
 
 jobs:
   terraform:
@@ -19,7 +20,6 @@ jobs:
       ARM_SUBSCRIPTION_ID: 382b6330-6cf0-4e15-b202-543c02240501
       ARM_TENANT_ID: 153f1179-3606-40e1-8c1b-e328b9987f3e
       
-
     steps:
       - uses: actions/checkout@v4
 
